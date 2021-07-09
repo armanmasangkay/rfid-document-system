@@ -1,0 +1,45 @@
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\RFID-Based Document Management.exe.config
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\RFID-Based Document Management.exe
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\RFID-Based Document Management.pdb
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\Guna.UI.dll
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Dashboard.resources
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Properties.Resources.resources
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.csproj.GenerateResource.Cache
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.exe
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.pdb
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\Bunifu_UI_v1.52.dll
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Overview.resources
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.OverviewControl.resources
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Document_Entry.resources
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Return_Document.resources
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Document_Lists.resources
+D:\Documents\Visual Studio 2012\Projects\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.User_Account.resources
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\RFID-Based Document Management.exe.config
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\RFID-Based Document Management.exe
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\RFID-Based Document Management.pdb
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.csprojAssemblyReference.cache
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Dashboard.resources
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Document_Entry.resources
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Document_Lists.resources
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Overview.resources
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.OverviewControl.resources
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Properties.Resources.resources
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Return_Document.resources
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.User_Account.resources
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.csproj.GenerateResource.cache
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.csproj.CoreCompileInputs.cache
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.csproj.CopyComplete
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.exe
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.pdb
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\MySql.Data.dll
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\Google.Protobuf.dll
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\Zstandard.Net.dll
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\Ubiety.Dns.Core.dll
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\System.Buffers.dll
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\gello\Documents\RFID-Document-Management-System\RFID-Based Document Management\RFID-Based Document Management\bin\Debug\MySql.Data.xml
