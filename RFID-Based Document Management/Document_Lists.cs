@@ -16,5 +16,10 @@ namespace RFID_Based_Document_Management
         {
             InitializeComponent();
         }
+
+        private void GunaButton5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
