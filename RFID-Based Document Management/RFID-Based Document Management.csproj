@@ -96,6 +96,7 @@
     <Compile Include="Document_Lists.Designer.cs">
       <DependentUpon>Document_Lists.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers.cs" />
     <Compile Include="Library\Database\DatabaseConnection.cs" />
     <Compile Include="Library\Models\Document.cs" />
     <Compile Include="Library\Models\Folder.cs" />

@@ -24,14 +24,14 @@ namespace RFID_Based_Document_Management
             InitializeComponent();
             this.databaseConnection = new Library.Database.DatabaseConnection();
             this.foldersRepository = new FoldersRepository(databaseConnection);
-            this.documentsRepository = new DocumentsRepository(databaseConnection,new DocumentStatusParser());
+            this.documentsRepository = new DocumentsRepository(databaseConnection,new DocumentStatusParser(),foldersRepository);
         }
 
-        private void populateDocumentList(ArrayList documents=null)
+        public void populateDocumentList(ArrayList documents=null)
         {
             if (documents == null)
             {
-                documents = documentsRepository.getAll(this.foldersRepository);
+                documents = documentsRepository.getAll();
             }
         
 
@@ -70,9 +70,7 @@ namespace RFID_Based_Document_Management
 
         private void changeFolderDetailsBasedOnType()
         {
-            string folderType = gunaComboBox1.SelectedItem.ToString();
-            gunaTextBox3.Text =folderType ;
-            gunaTextBox4.Text = foldersRepository.getNameById(folderType);
+            Helpers.changeFolderInfoFromSelectedFolderType(gunaComboBox1, gunaTextBox3, gunaTextBox4, foldersRepository);
 
         }
 
@@ -104,8 +102,8 @@ namespace RFID_Based_Document_Management
 
         private void Document_Entry_VisibleChanged(object sender, EventArgs e)
         {
-         
-            
+           
+            this.populateDocumentList();
 
         }
 
@@ -114,11 +112,11 @@ namespace RFID_Based_Document_Management
 
             ArrayList documents = gunaComboBox2.SelectedIndex != 0
                                    ?
-                                   documentsRepository.getDocumentsFromFolder(
+                                   documentsRepository.getAllFromFolder(
                                   foldersRepository.getFolderById(gunaComboBox2.SelectedItem.ToString())
                                   )
                                   :
-                                   documents = documentsRepository.getAll(foldersRepository); ;
+                                   documents = documentsRepository.getAll(); ;
 
             this.populateDocumentList(documents);
           

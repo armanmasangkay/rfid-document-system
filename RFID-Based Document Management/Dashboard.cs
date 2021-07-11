@@ -104,6 +104,7 @@ namespace RFID_Based_Document_Management
             this.control.Render(panel3, docEntry);
             this.render.FormText(this, "Document Entry");
             this.render.LabelText(gunaLabel2, "ADDING OR DOCUMENT ENTRY");
+          
         }
 
         private void gunaButton1_Click(object sender, EventArgs e)

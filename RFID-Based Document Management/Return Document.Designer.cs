@@ -32,7 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.gunaButton7 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton3 = new Guna.UI.WinForms.GunaButton();
             this.gunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
@@ -52,46 +51,11 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaGradientTileButton2 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaGradientTileButton1 = new Guna.UI.WinForms.GunaGradientTileButton();
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // gunaButton7
-            // 
-            this.gunaButton7.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gunaButton7.Animated = true;
-            this.gunaButton7.AnimationHoverSpeed = 0.07F;
-            this.gunaButton7.AnimationSpeed = 0.03F;
-            this.gunaButton7.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton7.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
-            this.gunaButton7.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
-            this.gunaButton7.BorderSize = 1;
-            this.gunaButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaButton7.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton7.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton7.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton7.ForeColor = System.Drawing.Color.White;
-            this.gunaButton7.Image = null;
-            this.gunaButton7.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton7.ImageOffsetX = 5;
-            this.gunaButton7.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton7.Location = new System.Drawing.Point(310, 403);
-            this.gunaButton7.Name = "gunaButton7";
-            this.gunaButton7.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
-            this.gunaButton7.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
-            this.gunaButton7.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton7.OnHoverImage = null;
-            this.gunaButton7.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton7.OnPressedDepth = 20;
-            this.gunaButton7.Radius = 3;
-            this.gunaButton7.Size = new System.Drawing.Size(144, 38);
-            this.gunaButton7.TabIndex = 301;
-            this.gunaButton7.Text = "RETURN AND CLOSE";
-            this.gunaButton7.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton7.TextOffsetX = 8;
             // 
             // gunaButton3
             // 
@@ -121,11 +85,12 @@
             this.gunaButton3.OnPressedColor = System.Drawing.Color.Black;
             this.gunaButton3.OnPressedDepth = 20;
             this.gunaButton3.Radius = 3;
-            this.gunaButton3.Size = new System.Drawing.Size(85, 38);
+            this.gunaButton3.Size = new System.Drawing.Size(235, 38);
             this.gunaButton3.TabIndex = 298;
             this.gunaButton3.Text = "RETURN";
             this.gunaButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton3.TextOffsetX = 8;
+            this.gunaButton3.Click += new System.EventHandler(this.GunaButton3_Click);
             // 
             // gunaTextBox4
             // 
@@ -135,6 +100,7 @@
             this.gunaTextBox4.BorderColor = System.Drawing.Color.Silver;
             this.gunaTextBox4.BorderSize = 1;
             this.gunaTextBox4.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gunaTextBox4.Enabled = false;
             this.gunaTextBox4.FocusedBaseColor = System.Drawing.Color.White;
             this.gunaTextBox4.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaTextBox4.FocusedForeColor = System.Drawing.SystemColors.ControlText;
@@ -154,6 +120,7 @@
             this.gunaTextBox3.BorderColor = System.Drawing.Color.Silver;
             this.gunaTextBox3.BorderSize = 1;
             this.gunaTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gunaTextBox3.Enabled = false;
             this.gunaTextBox3.FocusedBaseColor = System.Drawing.Color.White;
             this.gunaTextBox3.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaTextBox3.FocusedForeColor = System.Drawing.SystemColors.ControlText;
@@ -321,6 +288,7 @@
             this.gunaComboBox1.Radius = 3;
             this.gunaComboBox1.Size = new System.Drawing.Size(235, 38);
             this.gunaComboBox1.TabIndex = 292;
+            this.gunaComboBox1.SelectedIndexChanged += new System.EventHandler(this.GunaComboBox1_SelectedIndexChanged);
             // 
             // gunaDateTimePicker1
             // 
@@ -331,6 +299,7 @@
             this.gunaDateTimePicker1.BorderSize = 1;
             this.gunaDateTimePicker1.CustomFormat = null;
             this.gunaDateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.gunaDateTimePicker1.Enabled = false;
             this.gunaDateTimePicker1.FocusedColor = System.Drawing.Color.DarkGray;
             this.gunaDateTimePicker1.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaDateTimePicker1.ForeColor = System.Drawing.Color.Gray;
@@ -414,6 +383,9 @@
             this.gunaTextBox1.Radius = 3;
             this.gunaTextBox1.Size = new System.Drawing.Size(235, 38);
             this.gunaTextBox1.TabIndex = 285;
+            this.gunaTextBox1.TextChanged += new System.EventHandler(this.GunaTextBox1_TextChanged);
+            this.gunaTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.GunaTextBox1_KeyDown);
+            this.gunaTextBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.GunaTextBox1_KeyPress);
             // 
             // gunaTextBox2
             // 
@@ -423,6 +395,7 @@
             this.gunaTextBox2.BorderColor = System.Drawing.Color.Silver;
             this.gunaTextBox2.BorderSize = 1;
             this.gunaTextBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.gunaTextBox2.Enabled = false;
             this.gunaTextBox2.FocusedBaseColor = System.Drawing.Color.White;
             this.gunaTextBox2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaTextBox2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
@@ -434,40 +407,6 @@
             this.gunaTextBox2.Size = new System.Drawing.Size(235, 38);
             this.gunaTextBox2.TabIndex = 293;
             // 
-            // gunaButton1
-            // 
-            this.gunaButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gunaButton1.Animated = true;
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
-            this.gunaButton1.BorderSize = 1;
-            this.gunaButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.ImageOffsetX = 5;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(310, 403);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnPressedDepth = 20;
-            this.gunaButton1.Radius = 3;
-            this.gunaButton1.Size = new System.Drawing.Size(144, 38);
-            this.gunaButton1.TabIndex = 284;
-            this.gunaButton1.Text = "SAVE AND CLOSE";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.TextOffsetX = 8;
-            // 
             // gunaLabel5
             // 
             this.gunaLabel5.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -476,9 +415,9 @@
             this.gunaLabel5.ForeColor = System.Drawing.Color.DimGray;
             this.gunaLabel5.Location = new System.Drawing.Point(15, 23);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(335, 24);
+            this.gunaLabel5.Size = new System.Drawing.Size(346, 24);
             this.gunaLabel5.TabIndex = 283;
-            this.gunaLabel5.Text = "SCAN AND RETURN DOCUMENTS";
+            this.gunaLabel5.Text = "SCAN AND RETURN A DOCUMENT";
             // 
             // gunaGradientTileButton2
             // 
@@ -543,7 +482,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.gunaButton7);
             this.Controls.Add(this.gunaButton3);
             this.Controls.Add(this.gunaTextBox4);
             this.Controls.Add(this.gunaTextBox3);
@@ -558,12 +496,12 @@
             this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.gunaTextBox1);
             this.Controls.Add(this.gunaTextBox2);
-            this.Controls.Add(this.gunaButton1);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.gunaGradientTileButton2);
             this.Controls.Add(this.gunaGradientTileButton1);
             this.Name = "Return_Document";
             this.Size = new System.Drawing.Size(1327, 513);
+            this.Load += new System.EventHandler(this.Return_Document_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -571,8 +509,6 @@
         }
 
         #endregion
-
-        private Guna.UI.WinForms.GunaButton gunaButton7;
         private Guna.UI.WinForms.GunaButton gunaButton3;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox4;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox3;
@@ -592,7 +528,6 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton2;
         private Guna.UI.WinForms.GunaGradientTileButton gunaGradientTileButton1;
