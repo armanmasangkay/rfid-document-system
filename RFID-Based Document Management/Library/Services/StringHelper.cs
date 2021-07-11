@@ -15,5 +15,17 @@ namespace RFID_Based_Document_Management.Library.Services
                 throw new Exception(exceptionMessage);
             }
         }
+
+        public static string toMysqlDateString(string strDate)
+        {
+
+
+            return DateTime.Parse(strDate).ToString("yyyy-MM-dd");
+        }
+
+        public static string removeTimeFromDate(string strMysqlDateTime)
+        {
+           return strMysqlDateTime.Split(' ')[0];
+        }
     }
 }

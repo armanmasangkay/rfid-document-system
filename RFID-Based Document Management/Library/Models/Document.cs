@@ -13,11 +13,13 @@ namespace RFID_Based_Document_Management.Library.Models
         public string Owner { get; }
         public string Date { get; }
         public Folder Folder { get; }
-        public Document(string tag,string owner,string date,Folder folder)
+
+        public string CreatedAt { get; }
+        public Document(string tag,string owner,string date,Folder folder, string createdAt="")
         {
             StringHelper.throwIfEmpty(tag,"Tag is required");
-            StringHelper.throwIfEmpty(tag, "Owner is required");
-            StringHelper.throwIfEmpty(tag, "Date is required");
+            StringHelper.throwIfEmpty(owner, "Owner is required");
+            StringHelper.throwIfEmpty(date, "Date is required");
 
             if (folder == null)
             {
@@ -28,6 +30,7 @@ namespace RFID_Based_Document_Management.Library.Models
             this.Owner = owner;
             this.Date = date;
             this.Folder = folder;
+            this.CreatedAt = createdAt;
 
         }
     }

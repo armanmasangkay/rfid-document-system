@@ -23,6 +23,8 @@ namespace RFID_Based_Document_Management
             //UsersRepository usersRepo = new UsersRepository(new DatabaseConnection());
             //usersRepo.save(user);
 
+        
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Dashboard());

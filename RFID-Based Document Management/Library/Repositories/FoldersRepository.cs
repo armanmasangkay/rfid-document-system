@@ -36,13 +36,20 @@ namespace RFID_Based_Document_Management.Library.Repositories
             return folders;
         }
 
+  
+        private MySqlDataReader readFolderById(string strColumns,string id)
+        {
+            string sql = "SELECT "+strColumns +" FROM folders WHERE id=@id";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@id", id);
+            return command.ExecuteReader();
+     
+        }
+
         public string getNameById(string id)
         {
             this.connection.Open();
-            string sql = "SELECT name FROM folders WHERE id=@id";
-            MySqlCommand command = new MySqlCommand(sql, connection);
-            command.Parameters.AddWithValue("@id", id);
-            MySqlDataReader reader = command.ExecuteReader();
+            MySqlDataReader reader = this.readFolderById("name",id);
             string name = "";
             while (reader.Read())
             {
@@ -52,6 +59,20 @@ namespace RFID_Based_Document_Management.Library.Repositories
 
             return name;
         }
-            
+
+        public Folder getFolderById(string id)
+        {
+            this.connection.Open();
+            MySqlDataReader reader = this.readFolderById("*",id);
+            Folder folder=null;
+            while (reader.Read())
+            {
+                folder = new Folder(reader[0].ToString(), reader[1].ToString());
+            }
+            this.connection.Close();
+
+            return folder;
+        }
+
     }
 }

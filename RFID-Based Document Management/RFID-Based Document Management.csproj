@@ -100,6 +100,7 @@
     <Compile Include="Library\Models\Document.cs" />
     <Compile Include="Library\Models\Folder.cs" />
     <Compile Include="Library\Models\User.cs" />
+    <Compile Include="Library\Repositories\DocumentsRepository.cs" />
     <Compile Include="Library\Repositories\FoldersRepository.cs" />
     <Compile Include="Library\Repositories\UsersRepository.cs" />
     <Compile Include="Library\Services\StringHelper.cs" />
