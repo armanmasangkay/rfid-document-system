@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using RFID_Based_Document_Management.Library.Models;
 using RFID_Based_Document_Management.Library.Repositories;
 using RFID_Based_Document_Management.Library.Services;
+using RFID_Based_Document_Management.Library.Services.Parsers;
 
 namespace RFID_Based_Document_Management
 {
@@ -23,7 +24,7 @@ namespace RFID_Based_Document_Management
             InitializeComponent();
             this.databaseConnection = new Library.Database.DatabaseConnection();
             this.foldersRepository = new FoldersRepository(databaseConnection);
-            this.documentsRepository = new DocumentsRepository(databaseConnection);
+            this.documentsRepository = new DocumentsRepository(databaseConnection,new DocumentStatusParser());
         }
 
         private void populateDocumentList(ArrayList documents=null)
@@ -38,7 +39,7 @@ namespace RFID_Based_Document_Management
 
             foreach (Document doc in documents)
             {
-                gunaDataGridView1.Rows.Add(doc.Tag, doc.Folder.Id, doc.Owner, doc.Date);
+                gunaDataGridView1.Rows.Add(doc.Tag, doc.Folder.Id, doc.Owner, doc.Date,doc.Status.ToString());
             }
         }
 

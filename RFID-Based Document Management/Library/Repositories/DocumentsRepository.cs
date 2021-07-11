@@ -6,16 +6,19 @@ using System.Threading.Tasks;
 using RFID_Based_Document_Management.Library.Database;
 using RFID_Based_Document_Management.Library.Models;
 using RFID_Based_Document_Management.Library.Services;
+using RFID_Based_Document_Management.Library.Services.Parsers;
 using MySql.Data.MySqlClient;
 namespace RFID_Based_Document_Management.Library.Repositories
 {
     class DocumentsRepository
     {
         private MySqlConnection connection;
-        public DocumentsRepository(DatabaseConnection connection)
+        private DocumentStatusParser parser;
+        public DocumentsRepository(DatabaseConnection connection, DocumentStatusParser parser)
         {
 
             this.connection = connection.get();
+            this.parser = parser;
 
         }
         public bool isExistingTag(string tag)
@@ -49,12 +52,13 @@ namespace RFID_Based_Document_Management.Library.Repositories
             }
 
             this.connection.Open();
-            string sql="INSERT INTO documents(tag,folder_id,owner,doc_date) VALUES(@tag,@folderId,@owner,@docDate)";
+            string sql="INSERT INTO documents(tag,folder_id,owner,doc_date,status) VALUES(@tag,@folderId,@owner,@docDate,@status)";
             MySqlCommand command = new MySqlCommand(sql, this.connection);
             command.Parameters.AddWithValue("@tag", document.Tag);
             command.Parameters.AddWithValue("@folderId", document.Folder.Id);
             command.Parameters.AddWithValue("@owner", document.Owner);
             command.Parameters.AddWithValue("@docDate", document.Date);
+            command.Parameters.AddWithValue("@status", document.Status.ToString());
             command.ExecuteNonQuery();
             this.connection.Close();
         }
@@ -73,7 +77,8 @@ namespace RFID_Based_Document_Management.Library.Repositories
                 documents.Add(new Document(reader[0].ToString(),
                                reader[2].ToString(),
                                date,
-                               foldersRepository.getFolderById(reader[1].ToString())));
+                               foldersRepository.getFolderById(reader[1].ToString()),
+                               status: this.parser.parseString(reader[4].ToString())));
             }
             this.connection.Close();
             return documents;
@@ -93,8 +98,9 @@ namespace RFID_Based_Document_Management.Library.Repositories
 
                 documents.Add(new Document(reader[0].ToString(),
                                reader[2].ToString(),
-                               reader[3].ToString(),
-                               folder));
+                               StringHelper.removeTimeFromDate(reader[3].ToString()),
+                               folder,
+                               status:this.parser.parseString(reader[4].ToString())));
             }
             this.connection.Close();
             return documents;

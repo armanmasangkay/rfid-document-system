@@ -103,8 +103,9 @@
     <Compile Include="Library\Repositories\DocumentsRepository.cs" />
     <Compile Include="Library\Repositories\FoldersRepository.cs" />
     <Compile Include="Library\Repositories\UsersRepository.cs" />
+    <Compile Include="Library\Services\Parsers\DocumentStatusParser.cs" />
     <Compile Include="Library\Services\StringHelper.cs" />
-    <Compile Include="Library\Services\UserRoleParser.cs" />
+    <Compile Include="Library\Services\Parsers\UserRoleParser.cs" />
     <Compile Include="Overview.cs">
       <SubType>Form</SubType>
     </Compile>

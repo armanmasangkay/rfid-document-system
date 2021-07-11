@@ -7,6 +7,12 @@ using RFID_Based_Document_Management.Library.Services;
 
 namespace RFID_Based_Document_Management.Library.Models
 {
+    enum DocumentStatus
+    {
+        In,
+        Out
+    }
+
     class Document
     {
         public string Tag { get; }
@@ -15,7 +21,9 @@ namespace RFID_Based_Document_Management.Library.Models
         public Folder Folder { get; }
 
         public string CreatedAt { get; }
-        public Document(string tag,string owner,string date,Folder folder, string createdAt="")
+
+        public DocumentStatus Status { get; set; }
+        public Document(string tag,string owner,string date,Folder folder,string createdAt="",DocumentStatus status=DocumentStatus.In )
         {
             StringHelper.throwIfEmpty(tag,"Tag is required");
             StringHelper.throwIfEmpty(owner, "Owner is required");
