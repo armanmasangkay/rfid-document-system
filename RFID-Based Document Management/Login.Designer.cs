@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.gunaControlBox3 = new Guna.UI.WinForms.GunaControlBox();
             this.closeBtn = new Guna.UI.WinForms.GunaControlBox();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
@@ -37,6 +38,8 @@
             this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaControlBox3
@@ -48,7 +51,7 @@
             this.gunaControlBox3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gunaControlBox3.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox3.IconSize = 15F;
-            this.gunaControlBox3.Location = new System.Drawing.Point(678, 1);
+            this.gunaControlBox3.Location = new System.Drawing.Point(679, 1);
             this.gunaControlBox3.Name = "gunaControlBox3";
             this.gunaControlBox3.OnHoverBackColor = System.Drawing.Color.DarkGray;
             this.gunaControlBox3.OnHoverIconColor = System.Drawing.Color.White;
@@ -64,7 +67,7 @@
             this.closeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.closeBtn.IconColor = System.Drawing.Color.Black;
             this.closeBtn.IconSize = 15F;
-            this.closeBtn.Location = new System.Drawing.Point(727, 1);
+            this.closeBtn.Location = new System.Drawing.Point(728, 1);
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(23)))), ((int)(((byte)(64)))));
             this.closeBtn.OnHoverIconColor = System.Drawing.Color.White;
@@ -117,6 +120,7 @@
             this.gunaButton3.Text = "SIGN IN";
             this.gunaButton3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton3.TextOffsetX = 8;
+            this.gunaButton3.Click += new System.EventHandler(this.gunaButton3_Click);
             // 
             // gunaLabel3
             // 
@@ -193,12 +197,23 @@
             this.gunaLabel1.TabIndex = 321;
             this.gunaLabel1.Text = "Document Management RFID-Based IT System";
             // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.Image")));
+            this.gunaPictureBox1.Location = new System.Drawing.Point(15, 70);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(296, 267);
+            this.gunaPictureBox1.TabIndex = 330;
+            this.gunaPictureBox1.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(774, 405);
+            this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.gunaControlBox3);
             this.Controls.Add(this.closeBtn);
             this.Controls.Add(this.gunaLabel4);
@@ -212,6 +227,7 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -228,5 +244,6 @@
         private Guna.UI.WinForms.GunaTextBox gunaTextBox3;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }

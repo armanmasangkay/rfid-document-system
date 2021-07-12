@@ -122,5 +122,10 @@ namespace RFID_Based_Document_Management
           
             
         }
+
+        private void gunaButton2_Click(object sender, EventArgs e)
+        {
+            new New_Document_Type().ShowDialog();
+        }
     }
 }
