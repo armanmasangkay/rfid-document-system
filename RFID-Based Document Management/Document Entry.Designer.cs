@@ -58,6 +58,8 @@
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaGradientTileButton2 = new Guna.UI.WinForms.GunaGradientTileButton();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaComboBox3 = new Guna.UI.WinForms.GunaComboBox();
+            this.gunaLabel9 = new Guna.UI.WinForms.GunaLabel();
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,7 +142,7 @@
             this.gunaDataGridView1.RowHeadersVisible = false;
             this.gunaDataGridView1.RowTemplate.Height = 25;
             this.gunaDataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.gunaDataGridView1.Size = new System.Drawing.Size(810, 362);
+            this.gunaDataGridView1.Size = new System.Drawing.Size(810, 414);
             this.gunaDataGridView1.TabIndex = 272;
             this.gunaDataGridView1.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.gunaDataGridView1.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -231,7 +233,7 @@
             this.gunaGradientTileButton1.OnPressedColor = System.Drawing.Color.Black;
             this.gunaGradientTileButton1.OnPressedDepth = 0;
             this.gunaGradientTileButton1.Radius = 2;
-            this.gunaGradientTileButton1.Size = new System.Drawing.Size(814, 366);
+            this.gunaGradientTileButton1.Size = new System.Drawing.Size(814, 427);
             this.gunaGradientTileButton1.TabIndex = 271;
             // 
             // gunaButton2
@@ -287,7 +289,7 @@
             this.gunaButton3.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton3.ImageOffsetX = 5;
             this.gunaButton3.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton3.Location = new System.Drawing.Point(218, 403);
+            this.gunaButton3.Location = new System.Drawing.Point(218, 449);
             this.gunaButton3.Name = "gunaButton3";
             this.gunaButton3.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
             this.gunaButton3.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
@@ -541,7 +543,7 @@
             this.gunaGradientTileButton2.OnPressedColor = System.Drawing.Color.Black;
             this.gunaGradientTileButton2.OnPressedDepth = 0;
             this.gunaGradientTileButton2.Radius = 2;
-            this.gunaGradientTileButton2.Size = new System.Drawing.Size(468, 412);
+            this.gunaGradientTileButton2.Size = new System.Drawing.Size(468, 473);
             this.gunaGradientTileButton2.TabIndex = 257;
             // 
             // gunaLabel8
@@ -556,11 +558,48 @@
             this.gunaLabel8.TabIndex = 274;
             this.gunaLabel8.Text = "Select a folder";
             // 
+            // gunaComboBox3
+            // 
+            this.gunaComboBox3.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gunaComboBox3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaComboBox3.BaseColor = System.Drawing.Color.White;
+            this.gunaComboBox3.BorderColor = System.Drawing.Color.DarkGray;
+            this.gunaComboBox3.BorderSize = 1;
+            this.gunaComboBox3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaComboBox3.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gunaComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gunaComboBox3.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaComboBox3.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaComboBox3.ForeColor = System.Drawing.Color.DimGray;
+            this.gunaComboBox3.FormattingEnabled = true;
+            this.gunaComboBox3.ItemHeight = 32;
+            this.gunaComboBox3.Location = new System.Drawing.Point(218, 388);
+            this.gunaComboBox3.Name = "gunaComboBox3";
+            this.gunaComboBox3.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
+            this.gunaComboBox3.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.gunaComboBox3.Radius = 3;
+            this.gunaComboBox3.Size = new System.Drawing.Size(235, 38);
+            this.gunaComboBox3.TabIndex = 275;
+            // 
+            // gunaLabel9
+            // 
+            this.gunaLabel9.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gunaLabel9.AutoSize = true;
+            this.gunaLabel9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel9.ForeColor = System.Drawing.Color.DimGray;
+            this.gunaLabel9.Location = new System.Drawing.Point(47, 405);
+            this.gunaLabel9.Name = "gunaLabel9";
+            this.gunaLabel9.Size = new System.Drawing.Size(88, 21);
+            this.gunaLabel9.TabIndex = 276;
+            this.gunaLabel9.Text = "Storage #";
+            // 
             // Document_Entry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.gunaLabel9);
+            this.Controls.Add(this.gunaComboBox3);
             this.Controls.Add(this.gunaLabel8);
             this.Controls.Add(this.gunaComboBox2);
             this.Controls.Add(this.gunaDataGridView1);
@@ -582,7 +621,7 @@
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.gunaGradientTileButton2);
             this.Name = "Document_Entry";
-            this.Size = new System.Drawing.Size(1327, 513);
+            this.Size = new System.Drawing.Size(1327, 584);
             this.Load += new System.EventHandler(this.Document_Entry_Load);
             this.VisibleChanged += new System.EventHandler(this.Document_Entry_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).EndInit();
@@ -618,5 +657,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private Guna.UI.WinForms.GunaComboBox gunaComboBox3;
+        private Guna.UI.WinForms.GunaLabel gunaLabel9;
     }
 }

@@ -107,12 +107,12 @@ namespace RFID_Based_Document_Management.Library.Repositories
             return documents;
         }
 
-        public ArrayList getAllInside()
+        private ArrayList getByStatus(string status)
         {
             this.connection.Open();
 
             MySqlCommand command = this.selectDocuments("WHERE status=@status");
-            command.Parameters.AddWithValue("@status", "In");
+            command.Parameters.AddWithValue("@status", status);
             MySqlDataReader reader = command.ExecuteReader();
 
             ArrayList documents = new ArrayList();
@@ -122,6 +122,16 @@ namespace RFID_Based_Document_Management.Library.Repositories
             }
             this.connection.Close();
             return documents;
+        }
+
+        public ArrayList getAllInside()
+        {
+           return this.getByStatus("In");
+        }
+
+        public ArrayList getAllOutside()
+        {
+            return this.getByStatus("Out");
         }
 
         private ArrayList getByFolder(string additionalSql,Folder folder)
@@ -183,10 +193,12 @@ namespace RFID_Based_Document_Management.Library.Repositories
 
         }
 
-        public ArrayList getDocumentsWith(string owner,string type,string year,string month)
+        public ArrayList getDocumentsWith(string owner,string type, string status,string year,string month)
         {
             this.connection.Open();
             string additionalSql = "";
+       
+            string date = year + "-" + month;
 
             if(owner=="")
             {
@@ -206,12 +218,22 @@ namespace RFID_Based_Document_Management.Library.Repositories
                 additionalSql += "AND folder_id='" + type + "'";
             }
 
+            if (status == "")
+            {
+                additionalSql += "AND status!=''";
+            }
+            else
+            {
+                additionalSql += "AND status='" + status + "'";
+            }
 
+            if (year!="")
+            {
+                additionalSql += "AND created_at LIKE '%" + date + "%' OR doc_date LIKE '%"+date+"%'";
+            }
 
             MySqlCommand command = this.selectDocuments(additionalSql);
-            //command.Parameters.AddWithValue("@owner", owner);
-            //command.Parameters.AddWithValue("@folderId", type);
-            //command.Parameters.AddWithValue("@date", "%"+date+"%");
+         
             MySqlDataReader reader = command.ExecuteReader();
             ArrayList documents = new ArrayList();
             while (reader.Read())

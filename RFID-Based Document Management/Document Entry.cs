@@ -38,7 +38,7 @@ namespace RFID_Based_Document_Management
 
             foreach (Document doc in documents)
             {
-                gunaDataGridView1.Rows.Add(doc.Tag, doc.Folder.Id, doc.Owner, doc.Date, doc.Status.ToString(), doc.CreatedAt);
+                gunaDataGridView1.Rows.Add(doc.Tag, doc.Folder.Name, doc.Owner, doc.Date, doc.Status.ToString(), doc.CreatedAt);
             }
         }
 
@@ -84,8 +84,8 @@ namespace RFID_Based_Document_Management
 
             foreach (Folder folder in foldersRepository.getAll())
             {
-                gunaComboBox1.Items.Add(folder.Id);
-                gunaComboBox2.Items.Add(folder.Id);
+                gunaComboBox1.Items.Add(folder.Name);
+                gunaComboBox2.Items.Add(folder.Name);
 
             }
 
@@ -112,7 +112,7 @@ namespace RFID_Based_Document_Management
             ArrayList documents = gunaComboBox2.SelectedIndex != 0
                                    ?
                                    documentsRepository.getAllInsideFromFolder(
-                                        foldersRepository.getFolderById(gunaComboBox2.SelectedItem.ToString())
+                                        foldersRepository.getFolderById(foldersRepository.getIdByName(gunaComboBox2.SelectedItem.ToString()))
                                   )
                                   :
                                    documents = documentsRepository.getAllInside(); ;

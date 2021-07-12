@@ -60,6 +60,23 @@ namespace RFID_Based_Document_Management.Library.Repositories
             return name;
         }
 
+        public string getIdByName(string name)
+        {
+            this.connection.Open();
+            string sql = "SELECT id FROM folders WHERE name=@name";
+            MySqlCommand command = new MySqlCommand(sql, connection);
+            command.Parameters.AddWithValue("@name", name);
+            MySqlDataReader reader = command.ExecuteReader();
+            string id = "";
+            while (reader.Read())
+            {
+                id = reader[0].ToString();
+            }
+            this.connection.Close();
+
+            return id;
+        }
+
         public Folder getFolderById(string id)
         {
             this.connection.Open();
@@ -74,19 +91,29 @@ namespace RFID_Based_Document_Management.Library.Repositories
             return folder;
         }
 
-        public object[] getIds()
+        private object[] getSingleColumnValues(string columName)
         {
             this.connection.Open();
-            string sql = "SELECT id FROM folders";
+            string sql = "SELECT "+columName+" FROM folders";
             MySqlCommand command = new MySqlCommand(sql, this.connection);
             MySqlDataReader reader = command.ExecuteReader();
             ArrayList ids = new ArrayList();
-            while(reader.Read())
+            while (reader.Read())
             {
                 ids.Add(reader[0].ToString());
             }
             this.connection.Close();
             return ids.ToArray();
+        }
+
+        public object[] getIds()
+        {
+            return this.getSingleColumnValues("id");
+        }
+
+        public object[] getNames()
+        {
+            return this.getSingleColumnValues("name");
         }
 
     }

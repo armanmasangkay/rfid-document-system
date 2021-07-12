@@ -11,11 +11,12 @@ namespace RFID_Based_Document_Management.Library.Models
     {
         public string Id { get; }
         public string Name { get; }
-        public Folder(string Id, string name)
+        public Folder(string id, string name)
         {
-            StringHelper.throwIfEmpty(Id,"Folder ID is required");
+        
+            StringHelper.throwIfEmpty(name, "Folder ID is required");
             StringHelper.throwIfEmpty(name,"Folder name is required");
-            this.Id = Id;
+            this.Id = id;
             this.Name = name;
         }
     }

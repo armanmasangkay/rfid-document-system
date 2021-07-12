@@ -71,3 +71,15 @@ C:\Users\gello\Documents\RFID-Based Document Management\RFID-Based Document Mana
 C:\Users\gello\Documents\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.csproj.CopyComplete
 C:\Users\gello\Documents\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.exe
 C:\Users\gello\Documents\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.pdb
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Dashboard.resources
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Document_Entry.resources
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Document_Lists.resources
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Login.resources
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Overview.resources
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.OverviewControl.resources
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Properties.Resources.resources
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Return_Document.resources
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.User_Account.resources
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.csproj.GenerateResource.Cache
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\RFID-Based Document Management.exe.config
+C:\Users\gello\Documents\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Login.resources

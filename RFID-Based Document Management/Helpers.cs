@@ -16,8 +16,8 @@ namespace RFID_Based_Document_Management
         public static void changeFolderInfoFromSelectedFolderType(GunaComboBox comboBox,GunaTextBox folderIdTxtBox,GunaTextBox folderNameTxtBox,FoldersRepository foldersRepository)
         {
             string folderType = comboBox.SelectedItem.ToString();
-            folderIdTxtBox.Text = folderType;
-            folderNameTxtBox.Text = foldersRepository.getNameById(folderType);
+            folderIdTxtBox.Text = foldersRepository.getIdByName(folderType);
+            folderNameTxtBox.Text = folderType;
         }
     
     }

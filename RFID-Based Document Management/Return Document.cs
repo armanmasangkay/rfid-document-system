@@ -62,7 +62,7 @@ namespace RFID_Based_Document_Management
                 for (int i = 0; i < gunaComboBox1.Items.Count; i++)
                 {
                     string value = gunaComboBox1.GetItemText(gunaComboBox1.Items[i]);
-                    if(value== this.currentDocument.Folder.Id)
+                    if(value== this.currentDocument.Folder.Name)
                     {
                         gunaComboBox1.SelectedIndex = i;
                         gunaTextBox3.Text = this.currentDocument.Folder.Id;
@@ -81,14 +81,25 @@ namespace RFID_Based_Document_Management
         {
             foreach (Folder folder in foldersRepository.getAll())
             {
-                gunaComboBox1.Items.Add(folder.Id);
+                gunaComboBox1.Items.Add(folder.Name);
 
             }
+
+            this.populateDocumentList();
         }
 
         private void GunaComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             Helpers.changeFolderInfoFromSelectedFolderType(gunaComboBox1, gunaTextBox3, gunaTextBox4, foldersRepository);
+        }
+
+        private void populateDocumentList()
+        {
+            gunaDataGridView1.Rows.Clear();
+            foreach (Document document in documentsRepository.getAllOutside())
+            {
+                gunaDataGridView1.Rows.Add(document.Tag, document.Folder.Id, document.Owner, document.Date, document.Status.ToString());
+            }
         }
 
         private void GunaButton3_Click(object sender, EventArgs e)
@@ -99,13 +110,15 @@ namespace RFID_Based_Document_Management
                 return;
             }
             documentsRepository.updateStatus(this.currentDocument.Tag, DocumentStatus.In);
-            documentsRepository.updateFolderId(this.currentDocument.Tag, gunaComboBox1.SelectedItem.ToString());
+            documentsRepository.updateFolderId(this.currentDocument.Tag, foldersRepository.getIdByName(gunaComboBox1.SelectedItem.ToString()));
             MessageBox.Show("Document returned successfully!", "Great!");
 
             gunaTextBox1.Text = "";
             gunaTextBox2.Text = "";
             gunaTextBox3.Text = "";
             gunaTextBox4.Text = "";
+
+            this.populateDocumentList();
         }
     }
 }

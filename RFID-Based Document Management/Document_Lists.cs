@@ -38,13 +38,19 @@ namespace RFID_Based_Document_Management
             gunaDataGridView1.Rows.Clear();
             foreach (Document doc in documents)
             {
-                gunaDataGridView1.Rows.Add(doc.Tag, doc.Folder.Id, doc.Owner, doc.Date, doc.Folder.Id, doc.Folder.Name, doc.Status.ToString(), doc.CreatedAt);
+                gunaDataGridView1.Rows.Add(doc.Tag, doc.Folder.Name, doc.Owner, doc.Date, doc.Folder.Id, doc.Folder.Name, doc.Status.ToString(), doc.CreatedAt);
             }
         }
 
         private void Document_Lists_Load(object sender, EventArgs e)
         {
             this.populateDocumentList(documentsRepository.getAll());
+
+
+            string[] monthNames = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.MonthGenitiveNames;
+            string[] finalMonthNames = monthNames.Take(monthNames.Count() - 1).ToArray();
+            string[] statuses = { "In", "Out" };
+
             int currentYear = DateTime.Now.Year;
             int numberOfIterations = 100;
             object[] years = new object[numberOfIterations];
@@ -55,27 +61,43 @@ namespace RFID_Based_Document_Management
             }
 
             gunaComboBox1.Items.AddRange(documentsRepository.getOwners());
-            gunaComboBox2.Items.AddRange(foldersRepository.getIds());
-
-
-
+            gunaComboBox2.Items.AddRange(foldersRepository.getNames());
             gunaComboBox3.Items.AddRange(years);
+            gunaComboBox4.Items.AddRange(finalMonthNames);
+            gunaComboBox5.Items.AddRange(statuses);
         }
 
         private void GunaButton4_Click(object sender, EventArgs e)
         {
             string owner = "";
             string type = "";
+            string year = "";
+            string month = "";
+            string status = "";
             if(gunaComboBox1.SelectedIndex!=0)
             {
                 owner = gunaComboBox1.SelectedItem.ToString();
             }
             if (gunaComboBox2.SelectedIndex!=0)
             {
-                type = gunaComboBox2.SelectedItem.ToString();
+                type =foldersRepository.getIdByName(gunaComboBox2.SelectedItem.ToString());
+            }
+            if(gunaComboBox3.SelectedIndex!=0)
+            {
+                year = gunaComboBox3.SelectedItem.ToString();
             }
 
-            ArrayList documents=documentsRepository.getDocumentsWith(owner,type, "2020","01");
+            if (gunaComboBox4.SelectedIndex != 0)
+            {
+                month = gunaComboBox4.SelectedIndex.ToString().PadLeft(2,'0');
+            }
+
+            if (gunaComboBox5.SelectedIndex != 0)
+            {
+                status = gunaComboBox5.SelectedItem.ToString();
+            }
+
+            ArrayList documents=documentsRepository.getDocumentsWith(owner,type, status,year,month);
             this.populateDocumentList(documents);
         }
     }

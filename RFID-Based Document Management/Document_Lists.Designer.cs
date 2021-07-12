@@ -34,8 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.gunaButton6 = new Guna.UI.WinForms.GunaButton();
             this.gunaButton5 = new Guna.UI.WinForms.GunaButton();
-            this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
-            this.gunaTextBox1 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaButton4 = new Guna.UI.WinForms.GunaButton();
             this.gunaComboBox2 = new Guna.UI.WinForms.GunaComboBox();
             this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
@@ -52,6 +50,7 @@
             this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
             this.gunaComboBox3 = new Guna.UI.WinForms.GunaComboBox();
             this.gunaComboBox4 = new Guna.UI.WinForms.GunaComboBox();
+            this.gunaComboBox5 = new Guna.UI.WinForms.GunaComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gunaDataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -124,59 +123,6 @@
             this.gunaButton5.TextOffsetX = 8;
             this.gunaButton5.Click += new System.EventHandler(this.GunaButton5_Click);
             // 
-            // gunaButton1
-            // 
-            this.gunaButton1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gunaButton1.Animated = true;
-            this.gunaButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaButton1.AnimationSpeed = 0.03F;
-            this.gunaButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
-            this.gunaButton1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
-            this.gunaButton1.BorderSize = 1;
-            this.gunaButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.gunaButton1.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.gunaButton1.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaButton1.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaButton1.Image = null;
-            this.gunaButton1.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.ImageOffsetX = 5;
-            this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(1152, 64);
-            this.gunaButton1.Name = "gunaButton1";
-            this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
-            this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
-            this.gunaButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton1.OnHoverImage = null;
-            this.gunaButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton1.OnPressedDepth = 20;
-            this.gunaButton1.Radius = 3;
-            this.gunaButton1.Size = new System.Drawing.Size(159, 38);
-            this.gunaButton1.TabIndex = 236;
-            this.gunaButton1.Text = "FILTER BY FOLDER";
-            this.gunaButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.gunaButton1.TextOffsetX = 8;
-            // 
-            // gunaTextBox1
-            // 
-            this.gunaTextBox1.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.gunaTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaTextBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaTextBox1.BorderSize = 1;
-            this.gunaTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaTextBox1.FocusedBaseColor = System.Drawing.Color.White;
-            this.gunaTextBox1.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaTextBox1.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaTextBox1.Location = new System.Drawing.Point(917, 64);
-            this.gunaTextBox1.Name = "gunaTextBox1";
-            this.gunaTextBox1.PasswordChar = '\0';
-            this.gunaTextBox1.Radius = 3;
-            this.gunaTextBox1.Size = new System.Drawing.Size(229, 38);
-            this.gunaTextBox1.TabIndex = 235;
-            // 
             // gunaButton4
             // 
             this.gunaButton4.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -196,7 +142,7 @@
             this.gunaButton4.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton4.ImageOffsetX = 5;
             this.gunaButton4.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton4.Location = new System.Drawing.Point(607, 66);
+            this.gunaButton4.Location = new System.Drawing.Point(741, 64);
             this.gunaButton4.Name = "gunaButton4";
             this.gunaButton4.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
             this.gunaButton4.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
@@ -492,18 +438,43 @@
             this.gunaComboBox4.StartIndex = 0;
             this.gunaComboBox4.TabIndex = 286;
             // 
+            // gunaComboBox5
+            // 
+            this.gunaComboBox5.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.gunaComboBox5.BackColor = System.Drawing.Color.Transparent;
+            this.gunaComboBox5.BaseColor = System.Drawing.Color.White;
+            this.gunaComboBox5.BorderColor = System.Drawing.Color.DarkGray;
+            this.gunaComboBox5.BorderSize = 1;
+            this.gunaComboBox5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.gunaComboBox5.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.gunaComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.gunaComboBox5.FocusedColor = System.Drawing.Color.Empty;
+            this.gunaComboBox5.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaComboBox5.ForeColor = System.Drawing.Color.DimGray;
+            this.gunaComboBox5.FormattingEnabled = true;
+            this.gunaComboBox5.ItemHeight = 32;
+            this.gunaComboBox5.Items.AddRange(new object[] {
+            "All status"});
+            this.gunaComboBox5.Location = new System.Drawing.Point(607, 66);
+            this.gunaComboBox5.Name = "gunaComboBox5";
+            this.gunaComboBox5.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(165)))), ((int)(((byte)(80)))));
+            this.gunaComboBox5.OnHoverItemForeColor = System.Drawing.Color.White;
+            this.gunaComboBox5.Radius = 3;
+            this.gunaComboBox5.Size = new System.Drawing.Size(128, 38);
+            this.gunaComboBox5.StartIndex = 0;
+            this.gunaComboBox5.TabIndex = 287;
+            // 
             // Document_Lists
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.gunaComboBox5);
             this.Controls.Add(this.gunaComboBox4);
             this.Controls.Add(this.gunaComboBox3);
             this.Controls.Add(this.gunaLabel5);
             this.Controls.Add(this.gunaButton6);
             this.Controls.Add(this.gunaButton5);
-            this.Controls.Add(this.gunaButton1);
-            this.Controls.Add(this.gunaTextBox1);
             this.Controls.Add(this.gunaButton4);
             this.Controls.Add(this.gunaComboBox2);
             this.Controls.Add(this.gunaComboBox1);
@@ -522,8 +493,6 @@
 
         private Guna.UI.WinForms.GunaButton gunaButton6;
         private Guna.UI.WinForms.GunaButton gunaButton5;
-        private Guna.UI.WinForms.GunaButton gunaButton1;
-        private Guna.UI.WinForms.GunaTextBox gunaTextBox1;
         private Guna.UI.WinForms.GunaButton gunaButton4;
         private Guna.UI.WinForms.GunaComboBox gunaComboBox2;
         private Guna.UI.WinForms.GunaComboBox gunaComboBox1;
@@ -540,5 +509,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private Guna.UI.WinForms.GunaComboBox gunaComboBox3;
         private Guna.UI.WinForms.GunaComboBox gunaComboBox4;
+        private Guna.UI.WinForms.GunaComboBox gunaComboBox5;
     }
 }
