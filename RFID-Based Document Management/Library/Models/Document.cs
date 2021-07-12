@@ -38,6 +38,7 @@ namespace RFID_Based_Document_Management.Library.Models
             this.Owner = owner;
             this.Date = date;
             this.Folder = folder;
+            this.Status = status;
             this.CreatedAt = createdAt;
 
         }

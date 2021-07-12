@@ -71,7 +71,8 @@ namespace RFID_Based_Document_Management.Library.Repositories
                                reader[2].ToString(),
                                StringHelper.removeTimeFromDate(reader[3].ToString()),
                                folder,
-                               status: this.parser.parseString(reader[4].ToString()));
+                               status: this.parser.parseString(reader[4].ToString()),
+                               createdAt:reader[5].ToString());
         }
 
 
@@ -106,14 +107,44 @@ namespace RFID_Based_Document_Management.Library.Repositories
             return documents;
         }
 
+        public ArrayList getAllInside()
+        {
+            this.connection.Open();
+
+            MySqlCommand command = this.selectDocuments("WHERE status=@status");
+            command.Parameters.AddWithValue("@status", "In");
+            MySqlDataReader reader = command.ExecuteReader();
+
+            ArrayList documents = new ArrayList();
+            while (reader.Read())
+            {
+                documents.Add(this.buildDocument(reader, foldersRepository.getFolderById(reader[1].ToString())));
+            }
+            this.connection.Close();
+            return documents;
+        }
+
+        private ArrayList getByFolder(string additionalSql,Folder folder)
+        {
+            MySqlCommand command = this.selectDocuments(additionalSql);
+            command.Parameters.AddWithValue("@folderId", folder.Id);
+            MySqlDataReader reader = command.ExecuteReader();
+            return this.buildDocuments(reader, folder);
+            
+        }
+
         public ArrayList getAllFromFolder(Folder folder)
         {
             this.connection.Open();
-          
-            MySqlCommand command = this.selectDocuments("WHERE folder_id=@folderId");
-            command.Parameters.AddWithValue("@folderId", folder.Id);
-            MySqlDataReader reader = command.ExecuteReader();
-            ArrayList documents = this.buildDocuments(reader,folder);
+            ArrayList documents = this.getByFolder("WHERE folder_id=@folderId", folder);
+            this.connection.Close();
+            return documents;
+        }
+
+        public ArrayList getAllInsideFromFolder(Folder folder)
+        {
+            this.connection.Open();
+            ArrayList documents = this.getByFolder("WHERE folder_id=@folderId AND status='In'", folder);
             this.connection.Close();
             return documents;
         }
@@ -133,6 +164,63 @@ namespace RFID_Based_Document_Management.Library.Repositories
             this.connection.Close();
 
             return document;
+
+        }
+
+        public object[] getOwners()
+        {
+            this.connection.Open();
+            string sql = "SELECT owner FROM documents";
+            MySqlCommand command = new MySqlCommand(sql, this.connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            ArrayList owners=new ArrayList();
+            while(reader.Read())
+            {
+                owners.Add(reader[0].ToString());
+            }
+            this.connection.Close();
+            return  owners.ToArray();
+
+        }
+
+        public ArrayList getDocumentsWith(string owner,string type,string year,string month)
+        {
+            this.connection.Open();
+            string additionalSql = "";
+
+            if(owner=="")
+            {
+                additionalSql += "WHERE owner!=''";
+            }
+            else
+            {
+                additionalSql += "WHERE owner='" + owner + "'";
+            }
+
+            if(type=="")
+            {
+                additionalSql += "AND folder_id!=''";
+            }
+            else
+            {
+                additionalSql += "AND folder_id='" + type + "'";
+            }
+
+
+
+            MySqlCommand command = this.selectDocuments(additionalSql);
+            //command.Parameters.AddWithValue("@owner", owner);
+            //command.Parameters.AddWithValue("@folderId", type);
+            //command.Parameters.AddWithValue("@date", "%"+date+"%");
+            MySqlDataReader reader = command.ExecuteReader();
+            ArrayList documents = new ArrayList();
+            while (reader.Read())
+            {
+                documents.Add(this.buildDocument(reader, foldersRepository.getFolderById(reader[1].ToString())));
+            }
+            this.connection.Close();
+            return documents;
+
 
         }
 

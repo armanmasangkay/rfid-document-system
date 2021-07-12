@@ -74,5 +74,20 @@ namespace RFID_Based_Document_Management.Library.Repositories
             return folder;
         }
 
+        public object[] getIds()
+        {
+            this.connection.Open();
+            string sql = "SELECT id FROM folders";
+            MySqlCommand command = new MySqlCommand(sql, this.connection);
+            MySqlDataReader reader = command.ExecuteReader();
+            ArrayList ids = new ArrayList();
+            while(reader.Read())
+            {
+                ids.Add(reader[0].ToString());
+            }
+            this.connection.Close();
+            return ids.ToArray();
+        }
+
     }
 }

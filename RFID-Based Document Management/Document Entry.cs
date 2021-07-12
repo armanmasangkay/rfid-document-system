@@ -31,15 +31,14 @@ namespace RFID_Based_Document_Management
         {
             if (documents == null)
             {
-                documents = documentsRepository.getAll();
+                documents = documentsRepository.getAllInside();
             }
-        
 
             gunaDataGridView1.Rows.Clear();
 
             foreach (Document doc in documents)
             {
-                gunaDataGridView1.Rows.Add(doc.Tag, doc.Folder.Id, doc.Owner, doc.Date,doc.Status.ToString());
+                gunaDataGridView1.Rows.Add(doc.Tag, doc.Folder.Id, doc.Owner, doc.Date, doc.Status.ToString(), doc.CreatedAt);
             }
         }
 
@@ -112,11 +111,11 @@ namespace RFID_Based_Document_Management
 
             ArrayList documents = gunaComboBox2.SelectedIndex != 0
                                    ?
-                                   documentsRepository.getAllFromFolder(
-                                  foldersRepository.getFolderById(gunaComboBox2.SelectedItem.ToString())
+                                   documentsRepository.getAllInsideFromFolder(
+                                        foldersRepository.getFolderById(gunaComboBox2.SelectedItem.ToString())
                                   )
                                   :
-                                   documents = documentsRepository.getAll(); ;
+                                   documents = documentsRepository.getAllInside(); ;
 
             this.populateDocumentList(documents);
           
