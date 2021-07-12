@@ -137,5 +137,10 @@ namespace RFID_Based_Document_Management
         {
 
         }
+
+        private void gunaControlBox5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
