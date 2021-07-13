@@ -51,7 +51,9 @@
             this.gunaControlBox5 = new Guna.UI.WinForms.GunaControlBox();
             this.gunaCircleButton1 = new Guna.UI.WinForms.GunaCircleButton();
             this.gunaButton10 = new Guna.UI.WinForms.GunaButton();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaLinePanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaControlBox3
@@ -241,7 +243,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.DimGray;
-            this.gunaLabel1.Location = new System.Drawing.Point(8, 7);
+            this.gunaLabel1.Location = new System.Drawing.Point(62, 10);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(374, 21);
             this.gunaLabel1.TabIndex = 237;
@@ -441,7 +443,7 @@
             this.gunaControlBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gunaControlBox1.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox1.IconSize = 15F;
-            this.gunaControlBox1.Location = new System.Drawing.Point(1195, 0);
+            this.gunaControlBox1.Location = new System.Drawing.Point(1194, 1);
             this.gunaControlBox1.Name = "gunaControlBox1";
             this.gunaControlBox1.OnHoverBackColor = System.Drawing.Color.DarkGray;
             this.gunaControlBox1.OnHoverIconColor = System.Drawing.Color.White;
@@ -458,7 +460,7 @@
             this.gunaControlBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gunaControlBox4.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox4.IconSize = 15F;
-            this.gunaControlBox4.Location = new System.Drawing.Point(1244, 0);
+            this.gunaControlBox4.Location = new System.Drawing.Point(1243, 1);
             this.gunaControlBox4.Name = "gunaControlBox4";
             this.gunaControlBox4.OnHoverBackColor = System.Drawing.Color.Gray;
             this.gunaControlBox4.OnHoverIconColor = System.Drawing.Color.White;
@@ -474,7 +476,7 @@
             this.gunaControlBox5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.gunaControlBox5.IconColor = System.Drawing.Color.Black;
             this.gunaControlBox5.IconSize = 15F;
-            this.gunaControlBox5.Location = new System.Drawing.Point(1293, 0);
+            this.gunaControlBox5.Location = new System.Drawing.Point(1292, 1);
             this.gunaControlBox5.Name = "gunaControlBox5";
             this.gunaControlBox5.OnHoverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(23)))), ((int)(((byte)(64)))));
             this.gunaControlBox5.OnHoverIconColor = System.Drawing.Color.White;
@@ -537,12 +539,24 @@
             this.gunaButton10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton10.Click += new System.EventHandler(this.gunaButton10_Click);
             // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaPictureBox1.BackgroundImage")));
+            this.gunaPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(10, 2);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(44, 39);
+            this.gunaPictureBox1.TabIndex = 331;
+            this.gunaPictureBox1.TabStop = false;
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1338, 803);
+            this.Controls.Add(this.gunaPictureBox1);
             this.Controls.Add(this.gunaControlBox1);
             this.Controls.Add(this.gunaControlBox4);
             this.Controls.Add(this.gunaControlBox5);
@@ -567,6 +581,7 @@
             this.Text = "Document Management RFID-Based IT System - Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.gunaLinePanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -596,6 +611,7 @@
         private Guna.UI.WinForms.GunaControlBox gunaControlBox1;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox4;
         private Guna.UI.WinForms.GunaControlBox gunaControlBox5;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }
 
