@@ -82,4 +82,30 @@ D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Documen
 D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.User_Account.resources
 D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.csproj.GenerateResource.Cache
 D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\RFID-Based Document Management.exe.config
+<<<<<<< HEAD
 C:\Users\gello\Documents\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.Login.resources
+=======
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\RFID-Based Document Management.exe
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\RFID-Based Document Management.pdb
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\Guna.UI.dll
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\Google.Protobuf.dll
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\Zstandard.Net.dll
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\K4os.Compression.LZ4.Streams.dll
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\BouncyCastle.Crypto.dll
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\Ubiety.Dns.Core.dll
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\System.Memory.dll
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\System.Buffers.dll
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\K4os.Compression.LZ4.dll
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\K4os.Hash.xxHash.dll
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\System.Numerics.Vectors.dll
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\MySql.Data.xml
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.csproj.AssemblyReference.cache
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.New_Document_Type.resources
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.csproj.CoreCompileInputs.cache
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.csproj.CopyComplete
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.exe
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\obj\Debug\RFID-Based Document Management.pdb
+D:\Documents\Visual Studio 2012\Projects\rfid-document-system\RFID-Based Document Management\bin\Debug\MySql.Data.dll
+>>>>>>> 355881a6d550ad6eb4c915fe40a58be32f00d070
+C:\Users\gello\Documents\RFID-Based Document Management\RFID-Based Document Management\obj\Debug\RFID_Based_Document_Management.New_Document_Type.resources

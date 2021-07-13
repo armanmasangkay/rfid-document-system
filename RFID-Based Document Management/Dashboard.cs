@@ -140,7 +140,7 @@ namespace RFID_Based_Document_Management
 
         private void gunaControlBox5_Click(object sender, EventArgs e)
         {
-
+            (System.Windows.Forms.Application.OpenForms["Login"] as Login).WindowState = FormWindowState.Normal;
         }
     }
 }
